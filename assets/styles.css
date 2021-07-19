@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+
+}
+
+body {
+    background-color: #161623;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; */
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(25% at right 85%);
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e83);
+    clip-path: circle(15% at 5% 10%);
+}
+
+.container{
+    position:relative;  
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap:wrap;
+
+    z-index: 1;
+}
+.container .card {
+    position: relative;
+    width:280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0,0, 0.5);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow:hidden;
+    border-radius:15px;
+    background:rgba(255,255,255, 0.1);
+    border-top: solid 1px rgba(255,255,255, 0.5);
+    border-left: solid 1px rgba(255,255,255, 0.5);
+    backdrop-filter: blur(5px);
+
+
+
+}
+
+.container .card .content {
+    text-align: center;
+    padding: 20px;
+    transition:0.5s;
+    transform:translateY(100px);
+    opacity: 0;
+
+    
+}
+.container .card .content:hover{
+    transform: translateY(0);
+    opacity: 1;
+}
+.card .content h2{
+    font-size: 8rem;
+    color:rgba(255,255,255, 0.1);
+    position:absolute;
+    top:-60px;
+    right:20px;
+    pointer-events: none;
+    
+}
+
+.card .content h3{
+    color:#fff;
+    font-size: 1.8rem;
+    margin:5px;
+}
+.card .content p{
+    color:#fff;
+    
+}
+
+.card .content a{
+    display:inline-block;
+    color:#000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight:500;
+    background-color: #fff;
+    margin-top:15px;
+    padding:9px;
+    border-radius:9px;
+}
+.card .content a:hover{
+    background: linear-gradient(rgb(228, 66, 66), #f0f);
+    color:#fff;
+
+}
